@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ToolBarExampleTwo">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tb3"
+                app:title="Hello"
+                android:background="@color/purple_700"
+                app:titleTextColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:textSize="24dp"
+                android:layout_centerVertical="true"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textAlignment="viewEnd"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/my_fav"
+                android:id="@+id/iv"
+                android:layout_toLeftOf="@+id/tv"
+                android:layout_centerVertical="true"
+                app:tint="@color/white"/>
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click me"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/btnLike"/>
+</LinearLayout>

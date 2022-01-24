@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ToolBarExample">
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="1"
+        android:title="Setting"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/action_email"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:orderInCategory="2"
+        android:title="Email"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_add"
+        android:icon="@android:drawable/ic_menu_add"
+        android:orderInCategory="3"
+        android:title="User"
+        app:showAsAction="never" />
+</menu>

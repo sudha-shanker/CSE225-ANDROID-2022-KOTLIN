@@ -51,5 +51,4 @@ class ProgressBarExample : AppCompatActivity() {
             txtView.text = 0.toString() + "/" + pgsBar.max
         }
     }
-
 }

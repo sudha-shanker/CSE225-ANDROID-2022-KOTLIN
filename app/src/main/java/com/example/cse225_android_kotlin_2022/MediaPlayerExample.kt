@@ -17,11 +17,30 @@ class MediaPlayerExample : AppCompatActivity() {
 
         var sb= findViewById<SeekBar>(R.id.seekBar)
         var play= findViewById<ImageView>(R.id.play)
+        var ff = findViewById<ImageView>(R.id.fastForward)
+        var fr = findViewById<ImageView>(R.id.fastRewind)
+
         var playing:Boolean = false
         mp=MediaPlayer.create(this, R.raw.aarti)
 
         sb.max=mp.duration
         sb.progress=0
+
+       sb.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+                mp.seekTo(sb.progress)
+
+            }
+
+        })
+
         play.setOnClickListener {
             play.setImageResource(R.drawable.pause)
             if (!playing) {
@@ -51,6 +70,18 @@ class MediaPlayerExample : AppCompatActivity() {
                 play.setImageResource(R.drawable.play)
             }
 
+        }
+
+        ff.setOnClickListener {
+            if(mp.isPlaying) {
+                mp.seekTo(mp.currentPosition + 10000);
+            }
+        }
+
+        fr.setOnClickListener {
+            if(mp.isPlaying) {
+                mp.seekTo(mp.currentPosition - 10000);
+            }
         }
     }
 

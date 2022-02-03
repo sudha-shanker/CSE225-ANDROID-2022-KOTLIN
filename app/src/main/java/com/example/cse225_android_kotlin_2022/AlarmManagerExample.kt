@@ -45,6 +45,5 @@ class AlarmManagerExample : AppCompatActivity() {
             alarmManager.cancel(pendingIntent)
             Toast.makeText(this,"Alarm Cancelled", Toast.LENGTH_SHORT).show()
         }
-
     }
 }

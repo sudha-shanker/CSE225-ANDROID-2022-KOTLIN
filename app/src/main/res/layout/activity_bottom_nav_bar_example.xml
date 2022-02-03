@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <TextView
         android:id="@+id/tvLabel"
         android:layout_width="wrap_content"
@@ -11,9 +10,7 @@
         android:layout_centerInParent="true"
         android:textSize="18sp"
         android:textColor="#4a4a4a"
-        android:text="Home"
-        />
-
+        android:text="Home"        />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNav"
         android:layout_width="match_parent"
@@ -25,5 +22,4 @@
         app:menu="@menu/menu_bottom_navigation"
         app:itemIconTint="@color/selector_nav_item"
         app:itemTextColor="@color/selector_nav_item" />
-
 </RelativeLayout>

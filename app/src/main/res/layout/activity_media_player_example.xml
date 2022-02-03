@@ -31,12 +31,35 @@
         android:id="@+id/play"
         android:layout_width="99dp"
         android:layout_height="79dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="156dp"
         android:layout_marginTop="146dp"
         android:layout_marginBottom="54dp"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/play" />
+
+    <ImageView
+        android:id="@+id/fastForward"
+        android:layout_width="99dp"
+        android:layout_height="79dp"
+        android:src="@drawable/ic_fast_forward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182" />
+
+    <ImageView
+        android:id="@+id/fastRewind"
+        android:layout_width="99dp"
+        android:layout_height="79dp"
+        android:layout_marginEnd="28dp"
+        android:src="@drawable/ic_fast_rewind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

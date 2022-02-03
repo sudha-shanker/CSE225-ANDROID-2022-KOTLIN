@@ -34,9 +34,10 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="366dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginRight="151dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="367dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginRight="110dp"
         android:text="Repeative Alarm" />
 
     <Button

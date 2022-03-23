@@ -21,8 +21,8 @@ class JobSchedulerExample : AppCompatActivity() {
             jobScheduler = getSystemService(JOB_SCHEDULER_SERVICE) as JobScheduler
             val componentName = ComponentName(this, MyJobService::class.java)
             val builder = JobInfo.Builder(123, componentName)
-            builder.setMinimumLatency(1000)
-            builder.setOverrideDeadline(3000)
+            builder.setMinimumLatency(8000)
+            builder.setOverrideDeadline(10000)
             builder.setPersisted(true)
             builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_ANY)
             builder.setRequiresCharging(false)
@@ -35,8 +35,6 @@ class JobSchedulerExample : AppCompatActivity() {
                 jobScheduler = null
                 Toast.makeText(this, "Job Cancelled", Toast.LENGTH_SHORT).show()
             }
-
         }
     }
-
 }

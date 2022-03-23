@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DateTimePickerExample">
+
+    <EditText
+        android:id="@+id/in_date"
+        android:layout_width="302dp"
+        android:layout_height="76dp"
+        android:hint="Date"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="36dp"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/btn_date"
+        android:layout_width="160dp"
+        android:layout_height="59dp"
+        android:layout_alignBottom="@+id/in_date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-230dp"
+        android:layout_marginLeft="-230dp"
+        android:layout_marginBottom="-84dp"
+        android:layout_toEndOf="@+id/in_date"
+        android:layout_toRightOf="@+id/in_date"
+        android:text="SELECT DATE" />
+
+    <EditText
+        android:id="@+id/in_time"
+        android:layout_width="302dp"
+        android:layout_height="76dp"
+        android:hint="Time"
+        android:layout_below="@+id/in_date"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="57dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="120dp"
+        android:minHeight="48dp"/>
+
+    <Button
+        android:id="@+id/btn_time"
+        android:layout_width="160dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/in_time"
+        android:layout_alignStart="@+id/btn_date"
+        android:layout_alignLeft="@+id/btn_date"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-12dp"
+        android:layout_marginLeft="-12dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="105dp"
+        android:text="SELECT TIME" />
+
+
+
+</RelativeLayout>

@@ -6,16 +6,15 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.graphics.Color
+import android.graphics.drawable.Icon
 import android.media.AudioAttributes
 import android.net.Uri
 import android.os.Build
-import android.os.Build.VERSION
-import android.os.Build.VERSION_CODES
 import android.os.Bundle
 import android.widget.Button
 import android.widget.RemoteViews
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.NotificationCompat
+
 
 class NotificationManagerExample: AppCompatActivity() {
     lateinit var notificationManager : NotificationManager
@@ -46,11 +45,12 @@ class NotificationManagerExample: AppCompatActivity() {
             val intent = Intent(this,NotificationViewExample::class.java)
             pendingIntent = PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
 
-            soundUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"+ applicationContext.packageName+"/"+R.raw.ringtone)
+            soundUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://"+
+                    applicationContext.packageName+"/"+R.raw.ringtone)
             audioAttr = AudioAttributes.Builder()
                 .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                 .setUsage(AudioAttributes.USAGE_NOTIFICATION)
-                .build();
+                .build()
 
             remoteCollapsedViews = RemoteViews(packageName, R.layout.activity_splash_screen_example)
             remoteExpandedViews = RemoteViews(packageName, R.layout.activity_splash_screen_example_main)
@@ -85,16 +85,19 @@ class NotificationManagerExample: AppCompatActivity() {
                 .setLargeIcon(BitmapFactory.decodeResource(this.resources,R.drawable.logo_toolbar))
                 .setContentIntent(pendingIntent)
 
-              /*   .setStyle(
+                /* .setStyle(
                       Notification.BigTextStyle()
-                          .bigText("The road may be long, tortuous and wearied. But the resulting success is enduring, sure and sweet. The fool abandons hope in the wearied journey of life. The wise gets going - holding firmly to the promise of a better tomorrow. He that gives up too soon fails to understand that life rewards with success only those who cling on to hope against hope. Those who hope when it is unfashionable to hope."))
+                          .bigText("The road may be long, tortuous and wearied. But the resulting success is enduring, sure and sweet.
+                           The fool abandons hope in the wearied journey of life. The wise gets going - holding firmly to the promise
+                            of a better tomorrow. He that gives up too soon fails to understand that life rewards with success
+                            only those who cling on to hope against hope. Those who hope when it is unfashionable to hope."))
                         */
-                 /*   .setStyle(Notification.BigPictureStyle()
+                 /*  .setStyle(Notification.BigPictureStyle()
                     .bigPicture(BitmapFactory.decodeResource(this.resources,R.drawable.logo_toolbar))
                     .bigLargeIcon(null as Icon?)) */
 
-                /* .setCustomContentView(remoteCollapsedViews)
-                 .setCustomBigContentView(remoteExpandedViews) */
+               .setCustomContentView(remoteCollapsedViews)
+               .setCustomBigContentView(remoteExpandedViews)
 
                  .setAutoCancel(true)
 
@@ -109,7 +112,5 @@ class NotificationManagerExample: AppCompatActivity() {
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true)
         }
-
     }
-
 }

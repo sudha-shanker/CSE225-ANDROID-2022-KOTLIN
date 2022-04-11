@@ -60,6 +60,4 @@ class SharedPrefExampleTwo : AppCompatActivity() {
         textView.text = text
         switch1.isChecked = switchOnOff
     }
-
-
 }
